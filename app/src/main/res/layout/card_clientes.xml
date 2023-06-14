@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="0dp"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardElevation="4dp"
+    card_view:cardBackgroundColor="@color/yellow_2"
+    android:id="@+id/sabe">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/yellow_2"
+            android:text="Hola">
+
+        </TextView>
+    </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/lyDataRur"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+             <LinearLayout
+                 android:background="@color/yellow_3"
+                 android:orientation="horizontal"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:id="@+id/tvNameClient"
+                     android:layout_width="300dp"
+                     android:layout_height="20dp"
+                     android:layout_marginTop="5dp"
+                     android:text="Jose Ramon de la Mora Gonzalez"
+                     android:layout_marginLeft="5dp"
+                     android:fontFamily="sans-serif-light"
+                     android:textStyle="bold"
+                     android:textAlignment="textStart"
+                     android:textColor="@color/white">
+
+                 </TextView>
+                 <ImageView
+                     android:id="@+id/ivHeaderOpenClose"
+                     android:layout_width="20dp"
+                     android:layout_height="20dp"
+                     android:layout_marginTop="5dp"
+                     android:layout_gravity="center"
+                     android:src="@android:drawable/arrow_down_float"
+                     android:rotation="0">
+
+                 </ImageView>
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="150dp"
+                 android:orientation="horizontal"
+                 android:id="@+id/lyDataRunBody"
+                 android:layout_marginLeft="10dp">
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:translationY="0dp"
+                     android:id="@+id/lyDataRunBodyContainer"
+                     android:layout_marginLeft="5dp">
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content">
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Gmail: "
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                         <TextView
+                             android:id="@+id/tvGmail"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Pancho23@gmail.com"
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+
+                     </LinearLayout>
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content">
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Direccion: "
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                         <TextView
+                             android:id="@+id/tvDireccion"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Santa Marta #444 "
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                     </LinearLayout>
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content">
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Telefono: "
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                         <TextView
+                             android:id="@+id/tvTelefono"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="388289191"
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                     </LinearLayout>
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content">
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Telefono de la empresa : "
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                         <TextView
+                             android:id="@+id/tvTelefonoEmpresa"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="388289191"
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                     </LinearLayout>
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content">
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Credito : "
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                         <TextView
+                             android:id="@+id/tvCredito"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="3000"
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                     </LinearLayout>
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content">
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Limite de Credito : "
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                         <TextView
+                             android:id="@+id/tvLimiteCredito"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="3000"
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                     </LinearLayout>
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content">
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Saldo Pendiente : "
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                         <TextView
+                             android:id="@+id/tvSaldoPendiente"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="3000"
+                             android:textColor="@color/white"
+                             >
+
+                         </TextView>
+                     </LinearLayout>
+
+
+
+                 </LinearLayout>
+             </LinearLayout>
+
+
+     </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <group>
+
+        <item android:id="@+id/nav_item_main"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Inventarios">
+        </item>
+        <item android:id="@+id/nav_item_algo1"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="Servicios">
+        </item>
+        <item android:id="@+id/nav_item_algo2"
+            android:icon="@android:drawable/alert_dark_frame"
+            android:title="Clientes">
+        </item>
+    </group>
+
+    <item android:title="Cuenta">
+        <menu>
+            <item android:id="@+id/nav_item_algo3"
+                android:icon="@android:drawable/alert_dark_frame"
+                android:title="Gastos">
+            </item>
+            <item android:id="@+id/nav_item_algo4"
+                android:icon="@android:drawable/sym_action_email"
+                android:title="Algo1">
+            </item>
+            <item android:id="@+id/nav_item_algo5"
+                android:icon="@android:drawable/presence_online"
+                android:title="Algo1">
+            </item>
+        </menu>
+    </item>
+    <item android:title="Cuenta">
+        <menu>
+            <item android:id="@+id/nav_item_algo6"
+                android:icon="@android:drawable/divider_horizontal_dark"
+                android:title="Algo1">
+            </item>
+            <item android:id="@+id/nav_item_algo7"
+                android:icon="@android:drawable/toast_frame"
+                android:title="Algo1">
+            </item>
+            <item android:id="@+id/nav_item_algo8"
+                android:icon="@android:drawable/btn_dialog"
+                android:title="Algo1">
+            </item>
+        </menu>
+    </item>
+</menu>

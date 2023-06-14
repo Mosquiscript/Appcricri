@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientesActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvClientes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        >
+
+        <ProgressBar
+            android:background="@color/yellow_1"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/loadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:text="Espere cargando datos"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+   <!-- <LinearLayout
+        android:id="@+id/lyCargandoDatos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:gravity="center|center"
+        android:background="@color/yellow_1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Espere..."
+            android:textSize="49dp">
+
+        </TextView>
+
+    </LinearLayout>-->
+
+    <FrameLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fitsSystemWindows="true"
+            android:translationY="0dp">
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar3"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/yellow_4"
+                app:titleTextColor="@color/white"
+                app:title="Clientes"
+                app:layout_scrollFlags="scroll">
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/lyPopUpAddclintes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:orientation="vertical"
+            android:gravity="center|center"
+            android:background="@color/yellow_1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Añadir Clientes">
+            </TextView>
+
+            <EditText
+                android:id="@+id/etNombreCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre "
+                android:layout_margin="10dp"
+                android:inputType="text">
+            </EditText>
+            <EditText
+                android:id="@+id/etGmailCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Gmail"
+                android:inputType="text"
+                android:layout_margin="10dp">
+            </EditText>
+            <EditText
+                android:inputType="text"
+                android:id="@+id/etDireccionCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Direccion"
+                android:layout_margin="10dp">
+            </EditText>
+            <EditText
+                android:id="@+id/etTelefonoCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefono"
+                android:layout_margin="10dp">
+            </EditText>
+            <EditText
+                android:id="@+id/etTelefonoEmpresaCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefono del Negocio "
+                android:layout_margin="10dp">
+            </EditText>
+            <EditText
+                android:id="@+id/etLimiteCreditoliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Limite de Credito"
+                android:layout_margin="10dp">
+            </EditText>
+            <Button
+                android:onClick="añadirCliente"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@android:drawable/btn_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar">
+
+            </Button>
+        </LinearLayout>
+        <!--<LinearLayout
+            android:id="@+id/lyPopUpAddclintes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:gravity="center|center"
+            android:background="@color/material_dynamic_primary50">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:translationX="0dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="20dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Añadir Clientes">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/etNombreCliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nombre "
+                            android:layout_margin="10dp"
+                            android:inputType="text">
+                        </EditText>
+                        <EditText
+                            android:id="@+id/etGmailCliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Gmail"
+                            android:inputType="text"
+                            android:layout_margin="10dp">
+                        </EditText>
+                        <EditText
+                            android:inputType="text"
+                            android:id="@+id/etDireccionCliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Direccion"
+                            android:layout_margin="10dp">
+                        </EditText>
+                        <EditText
+                            android:id="@+id/etTelefonoCliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Telefono"
+                            android:layout_margin="10dp">
+                        </EditText>
+                        <EditText
+                            android:id="@+id/etTelefonoEmpresaCliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Telefono del Negocio "
+                            android:layout_margin="10dp">
+                        </EditText>
+                        <EditText
+                            android:id="@+id/etLimiteCreditoliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Limite de Credito"
+                            android:layout_margin="10dp">
+                        </EditText>
+                        <Button
+                            android:onClick="añadirCliente"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/ic_launcher_foreground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agregar">
+
+                        </Button>
+
+
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:contentDescription="Hola"
+
+            android:src="@android:drawable/ic_input_add" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
